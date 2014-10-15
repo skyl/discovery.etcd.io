@@ -83,5 +83,5 @@ func NewTokenHandler(w http.ResponseWriter, r *http.Request) {
 	if base_url == "" {
 		base_url = "https://discovery.etcd.io/"
 	}
-	fmt.Fprintf(w, path.Join(base_url, token))
+	fmt.Fprintf(w, base_url+token)
 }
